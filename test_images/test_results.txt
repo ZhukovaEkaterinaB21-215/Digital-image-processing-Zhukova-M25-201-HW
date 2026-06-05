@@ -1,0 +1,82 @@
+
+=== Test: TIFF Intel 1 Strip ===
+[PASS] loaded
+[PASS] width
+[PASS] height
+[PASS] pixels match
+
+=== Test: TIFF Intel Multi-Strip ===
+[PASS] loaded
+[PASS] width
+[PASS] height
+[PASS] pixels match (multi-strip)
+
+=== Test: TIFF Motorola 1 Strip ===
+[PASS] loaded
+[PASS] width (BE tag)
+[PASS] height (BE tag)
+[PASS] pixels match (BE)
+
+=== Test: TIFF Motorola Multi-Strip ===
+[PASS] loaded
+[PASS] width
+[PASS] height
+[PASS] pixels match (BE, multi-strip)
+
+=== Test: Otsu Threshold ===
+Otsu threshold found: 50
+[PASS] threshold between two classes
+Binary Otsu threshold found: 0
+[PASS] threshold != 255 on binary image
+
+=== Test: Segmentation (Large Object Removal) ===
+Small letters preserved: 675 / 675
+[PASS] small letters preserved
+Large block pixels remaining: 0 (expected 0)
+[PASS] large block removed
+[PASS] image size unchanged
+
+=== Test: Image Rotation ===
+[PASS] center pixel dark at 0 deg
+[PASS] center pixel dark at 360 deg
+[PASS] size preserved
+[PASS] background remains light
+
+=== Test: BMP Roundtrip ===
+[PASS] BMP file created
+[PASS] file size correct for 500x500
+[PASS] BMP signature 'BM'
+[PASS] biBitCount = 8
+
+=== Test Angle: Test 9:  LE 1strip  +2deg ===
+Detected correction angle: -1.926251 (expected: -2.000000)
+[PASS] correction angle: -1.926251 (expected -2.000000 +/- 0.500000)
+
+=== Test Angle: Test 10: LE multi   -3deg ===
+Detected correction angle: 3.012815 (expected: 3.000000)
+[PASS] correction angle: 3.012815 (expected 3.000000 +/- 0.500000)
+
+=== Test Angle: Test 11: BE 1strip  +5deg ===
+Detected correction angle: -5.063553 (expected: -5.000000)
+[PASS] correction angle: -5.063553 (expected -5.000000 +/- 0.500000)
+
+=== Test Angle: Test 12: BE multi  -1.5deg ===
+Detected correction angle: 1.507437 (expected: 1.500000)
+[PASS] correction angle: 1.507437 (expected 1.500000 +/- 0.500000)
+
+=== Test Angle: Test 13: no skew    0deg ===
+Detected correction angle: 0.178918 (expected: 0.000000)
+[PASS] correction angle: 0.178918 (expected 0.000000 +/- 0.500000)
+
+=== Test Angle: Test 14: large     +8deg ===
+Detected correction angle: -7.969515 (expected: -8.000000)
+[PASS] correction angle: -7.969515 (expected -8.000000 +/- 0.500000)
+
+=== Full Pipeline Synthetic Test ===
+Otsu threshold: 0
+Detected correction angle: -3.528701
+[PASS] correction angle matches true skew: -3.528701 (expected -3.500000 +/- 0.500000)
+Projection Energy Before: 2877427.000000
+Projection Energy After: 10343356.000000
+Energy improvement: +259.465453%
+[PASS] projection energy increased after correction
